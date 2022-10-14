@@ -20,14 +20,11 @@ let LocalFromCoookies = (req, res, next) => {
 };
 
 let LocalFromHeaders = (req, res, next) => {
-    //  console.log("111111 : ", jwt);
     jwt.verify(req.headers[CommonTokenName], CommonSecret, (err, authData) => {
         if (err) {
             console.log("err : ", err);
             res.sendStatus(403);
         } else {
-            console.log("222222 : ", authData);
-
             if (req.hasOwnProperty("KeshavSoft") === false) {
                 req.KeshavSoft = { Headers: {} };
             };

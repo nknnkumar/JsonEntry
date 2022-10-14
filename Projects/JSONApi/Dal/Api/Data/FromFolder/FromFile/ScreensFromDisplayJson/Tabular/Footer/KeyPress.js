@@ -2,7 +2,7 @@ let CommonDataSupplyKeyPress = require("../../../../../../../../../../DataSupply
 
 let EnterToServer = async ({ inJsonConfig, inItemConfig, inPK, inInsertKey, inDataPK, inPostData }) => {
     let LocalDataPK = inDataPK;
-    console.log("uuuuuuuuuuuuuu : ", inPostData);
+    
     if (LocalDataPK > 0) {
         let LocalFromEnterToServer = await CommonDataSupplyKeyPress.EnterToServer({
             inJsonConfig,
